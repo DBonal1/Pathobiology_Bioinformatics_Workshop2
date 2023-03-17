@@ -6,6 +6,7 @@
 # Specifies memory to allocate
 #SBATCH --mem=32G
 
+cd /users/USERNAME/data/genome/Homo_sapiens.GRCh38
 gunzip Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz   ##### Unzip the primary assembly file
 gunzip Homo_sapiens.GRCh38.109.gtf.gz   ##### Unzip the primary assembly file
 
