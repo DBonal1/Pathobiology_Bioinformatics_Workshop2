@@ -8,7 +8,6 @@
 
 ## Load modules required for script commands,  So this loads the most recent version of FastQC.  
 module load skewer/0.2.1
-mkdir /users/USERNAME/scratch/Workshop2/Trimmed_fastqs
 
 # get our data files
 FQ_DIR=/users/USERNAME/scratch/Workshop2/Raw_fastqs  #### Location of raw fastqs
