@@ -13,7 +13,7 @@ mkdir $path2main/Raw_fastqs  ####location for public FASTQ Download
 mkdir $path2main/Trimmed_fastqs
 mkdir $path2main/QC
 
-
+mkdir /users/USERNAME/data/genome
 
 
 
