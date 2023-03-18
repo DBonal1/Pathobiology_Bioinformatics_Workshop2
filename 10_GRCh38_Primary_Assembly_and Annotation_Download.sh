@@ -8,7 +8,7 @@
 
 ### To create aligner indexes you need a few file. These include a genome and an annotation file
 ### I like to keep these batch scripts with the files I download as a way of commenting and remembering the exact files I downloaded and from where. 
-output=/users/USERNAME/data/genome/Homo_sapiens.GRCh38  #### This will create a folder within your data folder which does not get deleted after time like in scratch.
+output=/users/USERNAME/scratch/Workshop2/genome/Homo_sapiens.GRCh38  #### This will create a folder within your data folder which does not get deleted after time like in scratch.
 
 
 #### Download the genome file (in fasta format, used in both Star and Salmon)
