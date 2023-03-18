@@ -18,6 +18,7 @@ genome=/users/USERNAME/data/genome/Homo_sapiens.GRCh38/Homo_sapiens.GRCh38.dna.p
 annotation=/users/USERNAME/data/genome/Homo_sapiens.GRCh38/Homo_sapiens.GRCh38.109.gtf  #### transcript annotation file
 
 # Define the output directory for the STAR index
+mkdir /users/dbonal/scratch/genome/Star_Index_Hs_GRCh38_150bp
 output_dir=/users/USERNAME/data/genome/Star_Index_Hs_GRCh38_150bp
 
 # Create the STAR index
