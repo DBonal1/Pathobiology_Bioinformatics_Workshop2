@@ -5,6 +5,9 @@
 #SBATCH -t 12:00:00
 # Specifies memory to allocate
 #SBATCH --mem=32G
+# (OPTIONAL)
+# Specifies location for all slurms to be written
+#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_Create_Directories_%j.out
 
 cd /users/USERNAME/data/genome/Homo_sapiens.GRCh38
 gunzip Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz   ##### Unzip the primary assembly file
