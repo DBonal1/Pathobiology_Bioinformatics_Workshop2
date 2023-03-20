@@ -5,6 +5,9 @@
 #SBATCH -t 24:00:00
 # Specifies memory to allocate
 #SBATCH --mem=32G
+# (OPTIONAL)
+# Specifies location for all slurms to be written
+#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_Create_Directories_%j.out
 
 ## Load modules required for script commands,  So this loads the most recent version of FastQC.  
 module load skewer/0.2.1
