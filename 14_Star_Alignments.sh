@@ -35,7 +35,7 @@ fq1=$path_trim_fq/${prefix}-trimmed-pair1.fastq.gz
 fq2=$path_trim_fq/${prefix}-trimmed-pair2.fastq.gz
 
 STAR \
-    --runThreadN 6 \
+    --runThreadN 12 \
     --readFilesCommand zcat \
     --genomeDir $STAR_INDEX \
     --readFilesIn $fq1 $fq2 \
