@@ -31,9 +31,3 @@ salmon index -t $gentrome -d $decoy -p 12 -i $output_dir --gencode
 salmon index 
 
 echo "Great Job!!!"
-
-
- 
-
-
-echo "Great Job!!!"    ##### Random Comment Added
