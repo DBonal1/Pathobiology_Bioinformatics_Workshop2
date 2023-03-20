@@ -4,7 +4,7 @@
 # Defines the length time for job to run (t)
 #SBATCH -t 12:00:00
 # Specifies memory to allocate
-#SBATCH --mem=32G
+#SBATCH --mem=120G
 # (OPTIONAL)
 # Specifies location for all slurms to be written
 #SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_6_Create_Directories_%j.out
@@ -19,7 +19,7 @@ module load fastqc/0.11.5
 output=/users/USERNAME/scratch/Workshop2/QC  #Path to where you want all QC files
 
 ## Run FASTQC 
-fastqc -o $output -f fastq *.fastq.gz -t 4
+fastqc -o $output -f fastq *.fastq.gz -t 6
 
 ### The "-o then /user/..." tells the program where to put the output files created by FASTQC 
 ####  "-t 4" tell CCV how many files to run at a time
