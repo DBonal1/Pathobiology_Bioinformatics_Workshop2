@@ -7,24 +7,22 @@
 #SBATCH --mem=32G
 # (OPTIONAL)
 # Specifies location for all slurms to be written
-#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_Create_Directories_%j.out
+#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_12_Decoy_txt_Creation_%j.out
 
+#Make directory for SALMON Index
+mkdir /users/USRENAME/scratch/Workshop2/genome/Salmon_Index_Hs_GRCh38
 
-# Define the paths to the genome assembly fasta file  in zipped format
-genome=/users/USERNAME/data/genome/Homo_sapiens.GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz    #### your primary assembly ZIPPED
-transcriptome=/users/USERNAME/data/genome/Homo_sapiens.GRCh38/Homo_sapiens.GRCh38.cdna.all.fa.gz
-# Define the output directory for the decoy txt file
-decoy_output=/users/USERNAME/data/genome/Salmon_Index_Hs_GRCh38/decoys.txt    
-gentrome=/users/USERNAME/data/genome/Salmon_Index_Hs_GRCh38/Homo_sapiens_GRCh38_gentrome.fa
+#Set directory to the newly created Salmon Index folder
+cd /users/USERNAME/scratch/Workshop2/genome/Salmon_Index_Hs_GRCh38
 
-gunzip $transcriptome
+#create path to downloaded genomes and annotation files
+path=/users/USERNAME/scratch/Workshop2/genome/Homo_sapiens.GRCh38
+
 # Create Decoys for Salmon
-grep "^>" <(gunzip -c $genome) | cut -d " " -f 1 > $decoy_output
-sed -i.bak -e 's/>//g' $decoy_output
+grep "^>" <(gunzip -c $path/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz) | cut -d " " -f 1 > decoys.txt
+sed -i.bak -e 's/>//g' decoys.txt
 
-cat $genome $transcriptome > $gentrome   ### 
-
-gzip $transcriptome ### save space and zip files
-gzip $gentrome      ### save space and zip files
+# Create concatenated transcriptome and genome reference file for index
+cat $path/Homo_sapiens.GRCh38.cdna.all.fa.gz $path/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz > Homo_sapiens_GRCh38_gentrome.fa.gz 
 
 echo "Great Job!!!"    ##### Random Comment Added
