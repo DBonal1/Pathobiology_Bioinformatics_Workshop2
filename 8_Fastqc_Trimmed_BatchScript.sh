@@ -7,7 +7,7 @@
 #SBATCH --mem=120G
 # (OPTIONAL)
 # Specifies location for all slurms to be written
-#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_8_Fastqc_Batchscript_%j.out
+#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_8_Fastqc_Trimmed_%j.out
 
 
 ## Change directories to where the fastq files are located, this can be completely different based on where the fastqs are located
@@ -19,7 +19,7 @@ module load fastqc/0.11.5
 output=/users/USERNAME/scratch/Workshop2/QC  #Path to where you want all QC files
 
 ## Run FASTQC 
-fastqc -o $output -f fastq *.fastq.gz -t 4
+fastqc -o $output -f fastq *.fastq.gz -t 6
 
 ### The "-o then /user/..." tells the program where to put the output files created by FASTQC 
 ####  "-t 4" tell CCV how many files to run at a time
