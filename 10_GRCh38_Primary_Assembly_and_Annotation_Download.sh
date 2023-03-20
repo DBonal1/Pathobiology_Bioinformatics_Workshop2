@@ -5,6 +5,9 @@
 #SBATCH -t 12:00:00
 # Specifies memory to allocate
 #SBATCH --mem=32G
+# (OPTIONAL)
+# Specifies location for all slurms to be written
+#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_Create_Directories_%j.out
 
 ### To create aligner indexes you need a few file. These include a genome and an annotation file
 ### I like to keep these batch scripts with the files I download as a way of commenting and remembering the exact files I downloaded and from where. 
