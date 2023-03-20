@@ -5,6 +5,9 @@
 #SBATCH -t 30:00:00
 # Specifies memory to allocate
 #SBATCH --mem=24G
+# (OPTIONAL)
+# Specifies location for all slurms to be written
+#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_Create_Directories_%j.out
 
 
 module load salmon/1.3.0  # Most up to date on CCV
