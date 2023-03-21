@@ -5,9 +5,6 @@
 #SBATCH -t 12:00:00
 # Specifies memory to allocate
 #SBATCH --mem=32G
-# (OPTIONAL)
-# Specifies location for all slurms to be written
-#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_4_Create_Directories_%j.out
 
 
 path2main=/users/USERNAME/scratch/Workshop2 
