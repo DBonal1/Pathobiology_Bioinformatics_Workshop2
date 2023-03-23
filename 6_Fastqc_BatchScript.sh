@@ -7,7 +7,7 @@
 #SBATCH --mem=120G
 # (OPTIONAL)
 # Specifies location for all slurms to be written
-#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_6_Create_Directories_%j.out
+#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_6_FASTQC_Raw_%j.out
 
 
 ## Change directories to where the fastq files are located, this can be completely different based on where the fastqs are located
