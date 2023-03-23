@@ -7,7 +7,7 @@
 #SBATCH --mem=32G
 # (OPTIONAL)
 # Specifies location for all slurms to be written
-#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_5_Create_Directories_%j.out
+#SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_5_FASTQ_Download_%j.out
 
 ##########################################################################################
 #
