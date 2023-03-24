@@ -1,10 +1,10 @@
 #!/bin/bash
 # Defines number of cores to use (n)
-#SBATCH -n 6
+#SBATCH -n 12
 # Defines the length time for job to run (t)
 #SBATCH -t 12:00:00
 # Specifies memory to allocate
-#SBATCH --mem=32G
+#SBATCH --mem=120G
 # (OPTIONAL)
 # Specifies location for all slurms to be written
 #SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_STAR_Index_Creation_%j.out
@@ -28,7 +28,7 @@ annotation=/users/USERNAME/scratch/Workshop2/genome/Homo_sapiens.GRCh38/Homo_sap
 output_dir=/users/dbonal/scratch/Workshop2/genome/Star_Index_Hs_GRCh38_150bp
 
 # Create the STAR index
-STAR --runThreadN 5 --runMode genomeGenerate --genomeDir $output_dir --genomeFastaFiles $genome --sjdbGTFfile $annotation --sjdbOverhang 149
+STAR --runThreadN 11 --runMode genomeGenerate --genomeDir $output_dir --genomeFastaFiles $genome --sjdbGTFfile $annotation --sjdbOverhang 149
 
 ######## --runThreadN  number of threads used
 #### --runMode    creating a genome index
