@@ -20,7 +20,7 @@ mkdir /users/USERNAME/scratch/Workshop2/STAR_Alignment_Output/BAM_Files
 ### Path to Star index
 STAR_INDEX=/users/USERNAME/scratch/Workshop2/genome/Star_Index_Hs_GRCh38_150bp 
 #### Path to folder containing the fastqs you will align
-path_trim_fq=/users/USERNAME/scratch/Patho_Bioinfomatics/Trimmed_fastqs  
+path_trim_fq=/users/USERNAME/scratch/Workshop2/Trimmed_fastqs  
 ### Path to Star Alignment outputs
 path_STAR_Alignment=/users/USERNAME/scratch/Workshop2/STAR_Alignment_Output 
 ### Path to Bam File output
