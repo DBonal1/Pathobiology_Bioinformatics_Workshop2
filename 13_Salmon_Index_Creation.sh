@@ -4,7 +4,7 @@
 # Defines the length time for job to run (t)
 #SBATCH -t 12:00:00
 # Specifies memory to allocate
-#SBATCH --mem=32G
+#SBATCH --mem=120G
 # (OPTIONAL)
 # Specifies location for all slurms to be written
 #SBATCH -o /users/USERNAME/scratch/Workshop2/slurms/SLURM_13_SALMON_Index_Creation_%j.out
